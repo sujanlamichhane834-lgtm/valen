@@ -73,3 +73,4 @@ function closeModal(){
   video.pause();
   video.src = "";
 }
+
