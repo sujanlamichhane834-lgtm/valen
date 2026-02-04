@@ -3,6 +3,7 @@ body {
   font-family: Poppins, sans-serif;
   background: linear-gradient(135deg,#e6d8ff,#fbe4f0);
   color: #4b2c6f;
+  text-align: center;
 }
 
 .center {
@@ -11,7 +12,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 button {
@@ -23,33 +23,42 @@ button {
   margin: 10px;
 }
 
-#yesBtn {
-  background: #c084fc;
-  color: white;
-}
+#yesBtn { background: #c084fc; color: white; }
+#noBtn { background: #f472b6; color: white; }
 
-#noBtn {
-  background: #f472b6;
-  color: white;
-}
-
-.story {
-  padding: 40px 20px;
-}
-
-.story-block {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: center;
-  margin-bottom: 40px;
+  justify-content: center;
+  margin: 40px 0;
 }
 
-.story-block img, video {
+.gallery img, .gallery video {
   width: 280px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#modal img, #modal video {
+  max-width: 90%;
+  max-height: 70%;
   border-radius: 20px;
 }
 
-.story-text {
-  max-width: 400px;
+#modal p {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
 }
